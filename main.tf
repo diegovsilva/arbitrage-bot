@@ -42,8 +42,8 @@ resource "aws_security_group" "arbitrage_bot_sg" {
   }
 }
 
-resource "aws_iam_role" "arbitrage_bot_role" {
-  name = "arbitrage_bot_role"
+resource "aws_iam_role" "arbitrage_bot_profile_2" {
+  name = "arbitrage_bot_profile_2"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -60,11 +60,11 @@ resource "aws_iam_role" "arbitrage_bot_role" {
 }
 
 resource "aws_iam_role_policy_attachment" "arbitrage_bot_policy_attachment" {
-  role       = aws_iam_role.arbitrage_bot_role.name
+  role       = aws_iam_role.arbitrage_bot_profile_2.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
 }
 
-resource "aws_iam_instance_profile" "arbitrage_bot_profile" {
-  name = "arbitrage_bot_profile"
-  role = aws_iam_role.arbitrage_bot_role.name
+resource "aws_iam_instance_profile" "arbitrage_bot_profile_2" {
+  name = "arbitrage_bot_profile_2"
+  role = aws_iam_role.arbitrage_bot_profile_2.name
 }

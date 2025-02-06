@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "The AWS region to deploy resources"
   type        = string
-  default     = "us-east-1"
+  default     = "us-east-2"
 }
 
 variable "ami_id" {
@@ -19,5 +19,6 @@ variable "instance_type" {
 variable "key_name" {
   description = "The name of the key pair to use for the EC2 instance"
   type        = string
-  default     = "your-key-pair"
+  default     = "pair_key_robo_arb"
 }
+

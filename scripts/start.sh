@@ -5,7 +5,7 @@ sudo yum update -y
 sudo yum install -y python3 git
 
 # Clone the repository (if not already present)
-git clone https://github.com/your-repo/arbitrage-bot.git /home/ec2-user/arbitrage-bot
+git clone https://github.com/diegovsilva/arbitrage-bot.git /home/ec2-user/arbitrage-bot
 
 # Navigate to the project directory
 cd /home/ec2-user/arbitrage-bot
